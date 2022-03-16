@@ -1,0 +1,22 @@
+# Capturing UDP packets
+
+# Using tcpdump
+
+1) Using the command tcpdump - 
+> tcpdump
+This will print all the packets trace on the console
+
+2) We can also use to send the packets into a file
+> tcpdump -w filename.ext
+> tcpdump -w output.pcap 
+
+3) Counting packets with -c
+> tcpdump -w output.pcap -c 10
+# This will capture only 10 packets
+
+4) Printing the UDP .pcap files with -r
+> tcpdump -r output.pcap
+
+5) Looking at real UDP packet headers
+> tcpdump udp -X -c 1
+# -X prints out the packet in both hex and ASCII
